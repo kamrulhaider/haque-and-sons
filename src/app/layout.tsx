@@ -5,9 +5,9 @@ import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: "Hoque & Sons Elevators",
+  title: "Haque and Sons Engineering Technology",
   description:
-    "Hoque & Sons: Precision, safety, and elegance in vertical transportation. Installation, maintenance, modernization.",
+    "Haque and Sons Engineering Technology: Precision, safety, and elegance in vertical transportation. Installation, maintenance, modernization.",
 };
 
 export default function RootLayout({

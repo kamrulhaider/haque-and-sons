@@ -30,7 +30,7 @@ export function HomeHero() {
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
         <div className="bg-black/30 backdrop-blur-sm p-8 rounded-lg">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white drop-shadow-lg">
-            Hoque & Sons Elevators
+            Haque and Sons Engineering Technology
           </h1>
           <p className="mt-4 max-w-2xl text-lg md:text-xl text-neutral-200 drop-shadow-md">
             Precision, safety, and elegance in vertical transportation.

@@ -23,7 +23,9 @@ export function Header() {
           className="flex items-center gap-2 font-bold text-lg text-primary"
         >
           <Mountain className="h-6 w-6" />
-          <span className="font-semibold">Hoque & Sons</span>
+          <span className="font-semibold">
+            Haque and Sons Engineering Technology
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -69,7 +71,7 @@ export function Header() {
                     onClick={closeSheet}
                   >
                     <Mountain className="h-6 w-6" />
-                    <span>Hoque & Sons</span>
+                    <span>Haque and Sons Engineering Technology</span>
                   </Link>
                   <Button variant="ghost" size="icon" onClick={closeSheet}>
                     <X className="h-6 w-6" />

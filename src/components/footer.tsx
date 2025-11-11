@@ -13,7 +13,7 @@ export function Footer() {
               className="flex items-center gap-2 text-xl font-bold"
             >
               <Mountain className="h-7 w-7" />
-              <span>Hoque & Sons</span>
+              <span>Haque and Sons Engineering Technology</span>
             </Link>
             <p className="mt-4 text-sm text-primary-foreground/70">
               Crafting reliable, elegant elevator experiences since 1988.
@@ -53,10 +53,10 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@hoqueandsons.com"
+                  href="mailto:info@haqueandsons.com"
                   className="hover:text-primary-foreground transition-colors"
                 >
-                  info@hoqueandsons.com
+                  info@haqueandsons.com
                 </a>
               </li>
             </ul>
@@ -82,8 +82,8 @@ export function Footer() {
 
         <div className="mt-12 border-t border-primary-foreground/20 pt-8 text-center text-sm text-primary-foreground/70">
           <p>
-            &copy; {new Date().getFullYear()} Hoque & Sons Elevators. All Rights
-            Reserved.
+            &copy; {new Date().getFullYear()} Haque and Sons Engineering
+            Technology. All Rights Reserved.
           </p>
         </div>
       </div>
