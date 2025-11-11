@@ -1,0 +1,138 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import { HomeHero } from '@/components/home-hero';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { services, projects, placeholderImages } from '@/lib/data';
+import { ArrowRight, ShieldCheck, Award, Cog } from 'lucide-react';
+
+export default function Home() {
+  const featuredProjects = projects.slice(0, 3);
+  const strengths = [
+    {
+      icon: <ShieldCheck className="w-12 h-12 text-primary" />,
+      title: 'Uncompromising Safety',
+      description: 'Our elevators are built with the highest safety standards and cutting-edge technology to ensure passenger security.',
+    },
+    {
+      icon: <Award className="w-12 h-12 text-primary" />,
+      title: 'Superior Quality',
+      description: 'We use only the finest materials and precision engineering to deliver durable and reliable elevator solutions.',
+    },
+    {
+      icon: <Cog className="w-12 h-12 text-primary" />,
+      title: 'Innovative Technology',
+      description: 'From smart controls to energy-efficient systems, we integrate the latest innovations for a seamless experience.',
+    },
+  ];
+
+  return (
+    <div className="flex flex-col">
+      <HomeHero />
+
+      <section id="services" className="py-16 lg:py-24 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">Our Services</h2>
+            <p className="mt-4 text-lg text-muted-foreground">Comprehensive solutions for all your vertical transportation needs.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {services.slice(0, 3).map((service) => (
+              <Card key={service.id} className="text-center transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                <CardHeader>
+                  <div className="mx-auto bg-primary/10 rounded-full p-4 w-20 h-20 flex items-center justify-center mb-4">
+                    <service.icon className="w-10 h-10 text-primary" />
+                  </div>
+                  <CardTitle>{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{service.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Button asChild variant="outline">
+              <Link href="/services">
+                Explore All Services <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section id="strengths" className="py-16 lg:py-24">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">Why Choose Aoyama</h2>
+            <p className="mt-4 text-lg text-muted-foreground">Experience the Aoyama difference.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            {strengths.map((strength) => (
+              <div key={strength.title} className="p-6">
+                <div className="flex justify-center mb-4">{strength.icon}</div>
+                <h3 className="text-xl font-semibold mb-2">{strength.title}</h3>
+                <p className="text-muted-foreground">{strength.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" className="py-16 lg:py-24 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">Featured Projects</h2>
+            <p className="mt-4 text-lg text-muted-foreground">Witness our commitment to excellence in every installation.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredProjects.map((project) => {
+              const image = placeholderImages.find(p => p.id === project.imageId);
+              return (
+                <Card key={project.id} className="overflow-hidden group">
+                  <div className="overflow-hidden">
+                    {image && (
+                      <Image
+                        src={image.imageUrl}
+                        alt={project.title}
+                        width={600}
+                        height={400}
+                        className="object-cover w-full h-60 transition-transform duration-300 group-hover:scale-110"
+                        data-ai-hint={image.imageHint}
+                      />
+                    )}
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                    <p className="text-muted-foreground line-clamp-2">{project.description}</p>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+           <div className="text-center mt-12">
+            <Button asChild>
+              <Link href="/projects">
+                View All Projects <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section id="cta" className="py-16 lg:py-24 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Ready to Elevate Your Space?</h2>
+          <p className="mt-4 text-lg max-w-2xl mx-auto text-primary-foreground/80">
+            Contact us today for a consultation and let us help you find the perfect vertical transportation solution for your building.
+          </p>
+          <div className="mt-8">
+            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Link href="/contact">Get a Quote</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

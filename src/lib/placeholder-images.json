@@ -1,0 +1,88 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-1",
+      "description": "A modern elevator in a sleek, minimalist lobby.",
+      "imageUrl": "https://images.unsplash.com/photo-1621293947870-3d7d6001d2a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb2Rlcm4lMjBlbGV2YXRvcnxlbnwwfHx8fDE3NjI4NzM3NjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern elevator"
+    },
+    {
+      "id": "hero-2",
+      "description": "View from inside a glass elevator looking out over a city.",
+      "imageUrl": "https://images.unsplash.com/photo-1564771752795-1f9c48984c44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxnbGFzcyUyMGVsZXZhdG9yfGVufDB8fHx8MTc2Mjg3Mzc2NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "glass elevator"
+    },
+    {
+      "id": "hero-3",
+      "description": "An elevator with intricate wooden paneling in a luxury hotel.",
+      "imageUrl": "https://images.unsplash.com/photo-1575291930020-5dbada5097c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bHV4dXJ5JTIwZWxldmF0b3J8ZW58MHx8fHwxNzYyODczNzY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "luxury elevator"
+    },
+    {
+      "id": "project-commercial-1",
+      "description": "Elevator bank in a modern high-rise office building.",
+      "imageUrl": "https://images.unsplash.com/photo-1582061575118-93cc82eca33b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxvZmZpY2UlMjBidWlsZGluZ3xlbnwwfHx8fDE3NjI4Njc2MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "office building"
+    },
+    {
+      "id": "project-commercial-2",
+      "description": "Exterior of a shopping mall with a glass elevator visible.",
+      "imageUrl": "https://images.unsplash.com/photo-1522684462852-01b24e76b77d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzaG9wcGluZyUyMG1hbGx8ZW58MHx8fHwxNzYyODY4OTQ2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "shopping mall"
+    },
+    {
+      "id": "project-residential-1",
+      "description": "Sleek elevator in a modern apartment complex lobby.",
+      "imageUrl": "https://images.unsplash.com/photo-1664190052386-b9feac724117?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhcGFydG1lbnQlMjBsb2JieXxlbnwwfHx8fDE3NjI4NzM3NjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "apartment lobby"
+    },
+    {
+      "id": "project-residential-2",
+      "description": "A private home elevator with custom finishes.",
+      "imageUrl": "https://images.unsplash.com/photo-1651289082781-b1fa7b20deab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxob21lJTIwZWxldmF0b3J8ZW58MHx8fHwxNzYyODczNzY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "home elevator"
+    },
+    {
+      "id": "project-hospitality-1",
+      "description": "Grand elevator in a luxury hotel lobby.",
+      "imageUrl": "https://images.unsplash.com/photo-1621293954908-907159247fc8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxob3RlbCUyMGxvYmJ5fGVufDB8fHx8MTc2MjgyMDYwOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hotel lobby"
+    },
+    {
+      "id": "project-public-1",
+      "description": "Durable and accessible elevator in a subway station.",
+      "imageUrl": "https://images.unsplash.com/photo-1694713851082-004df8a5c76c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwdWJsaWMlMjB0cmFuc2l0fGVufDB8fHx8MTc2Mjg3Mzc2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "public transit"
+    },
+    {
+      "id": "about-us-history",
+      "description": "Vintage photograph of the company's first elevator installation.",
+      "imageUrl": "https://images.unsplash.com/photo-1493243391685-aa64043dfd41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx2aW50YWdlJTIwcGhvdG9ncmFwaHxlbnwwfHx8fDE3NjI4NzM3NjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "vintage photograph"
+    },
+    {
+      "id": "team-member-1",
+      "description": "Portrait of a team member.",
+      "imageUrl": "https://images.unsplash.com/photo-1535643302794-19c3804b874b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYyODA4MDUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "team-member-2",
+      "description": "Portrait of a team member.",
+      "imageUrl": "https://images.unsplash.com/photo-1590086782792-42dd2350140d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjI4MDgwNTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "team-member-3",
+      "description": "Portrait of a team member.",
+      "imageUrl": "https://images.unsplash.com/photo-1590086782792-42dd2350140d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjI4MDgwNTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "team-member-4",
+      "description": "Portrait of a team member.",
+      "imageUrl": "https://images.unsplash.com/photo-1590086782792-42dd2350140d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjI4MDgwNTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    }
+  ]
+}
