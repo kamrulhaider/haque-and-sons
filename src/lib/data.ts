@@ -10,10 +10,11 @@ export type NavLink = {
 
 export const navLinks: NavLink[] = [
   { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
-  { href: '/projects', label: 'Projects' },
   { href: '/about', label: 'About Us' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/products', label: 'Products' },
+  { href: '/news', label: 'News' },
+  { href: '/knowledge', label: 'Knowledge' },
+  { href: '/contact', label: 'Contact Us' },
 ];
 
 export type Service = {
@@ -109,3 +110,47 @@ export const projects: Project[] = [
 ];
 
 export const projectTypes = ['All', ...Array.from(new Set(projects.map(p => p.type)))];
+
+export type Product = {
+  id: string;
+  title: string;
+  description: string;
+  imageId: string;
+  category: 'Passenger' | 'Home' | 'Freight' | 'Escalator';
+  startingPrice?: string;
+};
+
+export const products: Product[] = [
+  {
+    id: 'prod-passenger-1',
+    title: 'Passenger Elevator Series P1',
+    description: 'Quiet, energy‑efficient passenger elevators ideal for residential and commercial mid‑rise buildings.',
+    imageId: 'hero-1',
+    category: 'Passenger',
+    startingPrice: 'From $18,900',
+  },
+  {
+    id: 'prod-home-1',
+    title: 'Home Lift HL Compact',
+    description: 'Space‑saving home lift with smooth ride comfort and low power consumption.',
+    imageId: 'project-residential-2',
+    category: 'Home',
+    startingPrice: 'From $12,500',
+  },
+  {
+    id: 'prod-freight-1',
+    title: 'Freight Elevator FX Heavy',
+    description: 'Heavy‑duty freight elevators engineered for warehouses and industrial logistics.',
+    imageId: 'project-public-1',
+    category: 'Freight',
+    startingPrice: 'From $29,000',
+  },
+  {
+    id: 'prod-escalator-1',
+    title: 'Escalator EM Series',
+    description: 'Reliable escalators and moving walks for malls, transit, and high‑traffic venues.',
+    imageId: 'project-commercial-2',
+    category: 'Escalator',
+    startingPrice: 'From $35,000',
+  },
+];

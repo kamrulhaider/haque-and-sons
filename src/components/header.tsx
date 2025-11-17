@@ -5,7 +5,9 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Menu, Mountain, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import logoPng from "@/assets/logo.png";
 import { navLinks, type NavLink } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
@@ -20,12 +22,21 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link
           href="/"
-          className="flex items-center gap-2 font-bold text-lg text-primary"
+          className="flex items-center gap-3 font-bold text-lg text-primary"
+          aria-label="Hoque & Sons Engineering Technology Home"
         >
-          <Mountain className="h-6 w-6" />
-          <span className="font-semibold">
-            Haque and Sons Engineering Technology
+          <Image
+            src={logoPng}
+            alt="Hoque & Sons Engineering Technology logo"
+            width={56}
+            height={56}
+            className="h-14 w-14 object-contain"
+            priority
+          />
+          <span className="font-semibold hidden sm:inline">
+            Hoque & Sons Engineering Technology
           </span>
+          <span className="font-semibold sm:hidden">Hoque & Sons ET</span>
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -67,11 +78,18 @@ export function Header() {
                 <div className="flex items-center justify-between border-b pb-4">
                   <Link
                     href="/"
-                    className="flex items-center gap-2 font-bold text-lg text-primary"
+                    className="flex items-center gap-3 font-bold text-lg text-primary"
                     onClick={closeSheet}
+                    aria-label="Hoque & Sons Engineering Technology Home"
                   >
-                    <Mountain className="h-6 w-6" />
-                    <span>Haque and Sons Engineering Technology</span>
+                    <Image
+                      src={logoPng}
+                      alt="Hoque & Sons Engineering Technology logo"
+                      width={48}
+                      height={48}
+                      className="h-12 w-12 object-contain"
+                    />
+                    <span>Hoque & Sons ET</span>
                   </Link>
                   <Button variant="ghost" size="icon" onClick={closeSheet}>
                     <X className="h-6 w-6" />
