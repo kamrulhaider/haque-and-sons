@@ -3,7 +3,7 @@ import Link from "next/link";
 import { HomeHero } from "@/components/home-hero";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { services, projects, placeholderImages, products } from "@/lib/data";
+import { services, projects } from "@/lib/data";
 import {
   ArrowRight,
   ShieldCheck,
@@ -76,6 +76,33 @@ export default function Home() {
     },
   ];
 
+  const homepageProducts = [
+    {
+      id: "sigma",
+      name: "Sigma Elevator",
+      description:
+        "Safe, smooth and energy-efficient elevators trusted worldwide for residential and commercial projects.",
+      type: "Passenger & Commercial Elevators",
+      image: "/Sigma-1.png",
+    },
+    {
+      id: "aoyama",
+      name: "Aoyama Elevator",
+      description:
+        "Japanese-inspired precision with quiet operation and refined cabin design.",
+      type: "Premium Residential & Hospitality Elevators",
+      image: "/Aoyama-1.png",
+    },
+    {
+      id: "fujitech",
+      name: "Fuji Tech Korea Elevator",
+      description:
+        "High-performance Korean-engineered elevators for malls, offices and mixed-use buildings.",
+      type: "Commercial & Mixed-Use Elevators",
+      image: "/Fuji-tech-1.png",
+    },
+  ];
+
   return (
     <div className="flex flex-col">
       <HomeHero />
@@ -145,39 +172,59 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="strengths" className="py-20 lg:py-28 relative">
-        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,theme(colors.primary)/10%,transparent_70%)]" />
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
+      <section
+        id="strengths"
+        className="relative py-20 lg:py-28 bg-gradient-to-b from-background via-background to-card/60 overflow-hidden"
+      >
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,theme(colors.primary)/18%,transparent_70%)] opacity-70" />
+        <div className="relative container mx-auto px-4">
+          <div className="mb-12 flex flex-col items-center text-center">
+            <span className="inline-flex items-center rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
+              Why Choose Us
+            </span>
+            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
               Why Hoque & Sons Engineering Technology
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Three pillars behind every elevation we deliver.
+            <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
+              We combine safety, craftsmanship, and smart technology to deliver
+              smooth, reliable vertical transportation for every type of
+              building.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12">
             {strengths.map((strength) => (
-              <div key={strength.title} className="p-6">
-                <div className="flex justify-center mb-4">{strength.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{strength.title}</h3>
-                <p className="text-muted-foreground">{strength.description}</p>
+              <div
+                key={strength.title}
+                className="relative overflow-hidden rounded-2xl border border-border/70 bg-card/80 p-6 text-left shadow-sm backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
+              >
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                    {strength.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold">{strength.title}</h3>
+                </div>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {strength.description}
+                </p>
               </div>
             ))}
           </div>
-          <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {stats.map((s) => (
               <div
                 key={s.label}
-                className="relative overflow-hidden rounded-xl border bg-card p-6 text-center shadow-sm"
+                className="relative overflow-hidden rounded-2xl border border-border/60 bg-card/90 p-6 text-center shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
-                <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-primary/10 to-transparent opacity-60" />
+                <div className="relative mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-background/80 text-primary shadow-sm">
                   {s.icon}
                 </div>
-                <div className="text-3xl font-bold tracking-tight text-primary">
+                <div className="relative text-3xl font-bold tracking-tight text-primary">
                   {s.value}
                 </div>
-                <div className="mt-1 text-sm font-medium text-muted-foreground uppercase tracking-wide">
+                <div className="relative mt-1 text-xs font-medium text-muted-foreground uppercase tracking-[0.18em]">
                   {s.label}
                 </div>
               </div>
@@ -186,7 +233,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Smaller featured products strip so products still appear on homepage */}
+      {/* Featured products strip using the three main brands */}
       <section
         id="featured-products"
         className="py-16 lg:py-20 bg-background relative"
@@ -195,48 +242,49 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
-              Featured Products
+              Featured Elevator Brands
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Best‑sellers trusted for reliability, comfort, and safety.
+              Trusted global brands we supply and install across residential,
+              commercial and mixed-use projects.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {products.slice(0, 3).map((prod) => {
-              const image = placeholderImages.find(
-                (p) => p.id === prod.imageId
-              );
-              return (
-                <Card key={prod.id} className="overflow-hidden group">
-                  <div className="overflow-hidden">
-                    {image && (
-                      <Image
-                        src={image.imageUrl}
-                        alt={prod.title}
-                        width={600}
-                        height={400}
-                        className="object-cover w-full h-60 transition-transform duration-300 group-hover:scale-110"
-                        data-ai-hint={image.imageHint}
-                      />
-                    )}
+            {homepageProducts.map((prod) => (
+              <Card
+                key={prod.id}
+                className="overflow-hidden group border border-border/60 bg-card/80 backdrop-blur-sm shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
+              >
+                <div className="overflow-hidden h-60 w-full">
+                  <Image
+                    src={prod.image}
+                    alt={prod.name}
+                    width={600}
+                    height={400}
+                    className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+                <CardContent className="p-6 flex flex-col gap-3">
+                  <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
+                    {prod.name}
+                  </h3>
+                  <p className="text-sm text-muted-foreground line-clamp-3">
+                    {prod.description}
+                  </p>
+                  <div className="mt-2 flex items-center justify-between text-xs text-muted-foreground">
+                    <span className="rounded-full bg-primary/10 px-3 py-1 font-medium text-primary">
+                      {prod.type}
+                    </span>
+                    <Link
+                      href={`/products/${prod.id}`}
+                      className="text-primary font-medium hover:underline"
+                    >
+                      View details
+                    </Link>
                   </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                      {prod.title}
-                    </h3>
-                    <p className="text-muted-foreground line-clamp-2">
-                      {prod.description}
-                    </p>
-                    <div className="mt-4 flex items-center justify-between text-xs text-muted-foreground">
-                      <span className="rounded-full bg-primary/10 px-3 py-1 font-medium text-primary">
-                        {prod.category}
-                      </span>
-                      {prod.startingPrice && <span>{prod.startingPrice}</span>}
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+                </CardContent>
+              </Card>
+            ))}
           </div>
           <div className="text-center mt-10">
             <Button asChild variant="outline">
