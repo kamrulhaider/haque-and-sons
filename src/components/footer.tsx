@@ -40,26 +40,41 @@ export function Footer() {
 
           <div>
             <h3 className="font-semibold tracking-wider uppercase">Contact</h3>
-            <ul className="mt-4 space-y-2 text-sm text-primary-foreground/70">
-              <li>123 Elevator Lane,</li>
-              <li>Metropolis, ST 12345</li>
-              <li className="pt-2">
+            <div className="mt-4 space-y-4 text-sm text-primary-foreground/70">
+              <div>
+                <p className="font-semibold">Corporate Office</p>
+                <p>Faruk Chamber (10th Floor)</p>
+                <p>1403 Sk. Mujib Road, Chomohony More</p>
+                <p>Agrabad, Chattogram, Bangladesh</p>
+              </div>
+              <div>
+                <p className="font-semibold">Feni Office</p>
+                <p>Shukhi Nibash, Holding # 6/1</p>
+                <p>Opposite Fire Service Station</p>
+                <p>Bhuiya Bari Road, Feni</p>
+              </div>
+              <div>
+                <p className="font-semibold">Warehouse / Show Room</p>
+                <p>Bara Quarter</p>
+                <p>Phartali, Chattogram</p>
+              </div>
+              <div className="pt-1 space-y-1">
+                <p className="font-semibold">Phone</p>
                 <a
-                  href="tel:+1234567890"
-                  className="hover:text-primary-foreground transition-colors"
+                  href="tel:02333311757"
+                  className="block hover:text-primary-foreground transition-colors"
                 >
-                  (123) 456-7890
+                  02333311757, 01714-404495, 01673-355534
                 </a>
-              </li>
-              <li>
+                <p className="font-semibold mt-2">Email</p>
                 <a
-                  href="mailto:info@haqueandsons.com"
-                  className="hover:text-primary-foreground transition-colors"
+                  href="mailto:ziaulhaquejami@gmail.com"
+                  className="block hover:text-primary-foreground transition-colors"
                 >
-                  info@haqueandsons.com
+                  ziaulhaquejami@gmail.com
                 </a>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
 
           <div>

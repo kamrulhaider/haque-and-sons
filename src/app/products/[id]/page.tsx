@@ -77,12 +77,13 @@ const productDetails = {
 
 type ProductId = keyof typeof productDetails;
 
-interface ProductPageProps {
-  params: { id: string };
-}
-
-export default function ProductDetailPage({ params }: ProductPageProps) {
-  const key = params.id as ProductId;
+export default async function ProductDetailPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const key = id as ProductId;
   const product = (
     productDetails as Record<string, (typeof productDetails)[ProductId]>
   )[key];
