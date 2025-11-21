@@ -125,7 +125,9 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] items-start">
           <Card className="overflow-hidden border border-border/70 bg-card/90 backdrop-blur-sm shadow-sm">
-            {product.id === "sigma" && product.gallery && product.gallery.length > 0 ? (
+            {product.id === "sigma" &&
+            product.gallery &&
+            product.gallery.length > 0 ? (
               <div className="grid grid-cols-4 gap-3 p-4">
                 {/* Main hero image */}
                 <div className="relative col-span-4 md:col-span-2 md:row-span-2 h-64 md:h-96 rounded-xl overflow-hidden">
