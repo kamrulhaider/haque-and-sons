@@ -11,6 +11,21 @@ const productDetails = {
     brochure: "/Sigma 2024.pdf",
     imagePrimary: "/Sigma-1.png",
     imageSecondary: "/Sigma-2.png",
+    gallery: [
+      "/sigma/sigma (1).jpg",
+      "/sigma/sigma (2).jpg",
+      "/sigma/sigma (3).jpg",
+      "/sigma/sigma (4).jpg",
+      "/sigma/sigma (5).jpg",
+      "/sigma/sigma (6).jpg",
+      "/sigma/sigma (7).jpg",
+      "/sigma/sigma (8).jpg",
+      "/sigma/sigma (9).jpg",
+      "/sigma/sigma (10).jpg",
+      "/sigma/sigma (11).jpg",
+      "/sigma/sigma (12).jpg",
+      "/sigma/sigma (13).jpg",
+    ],
     type: "Passenger & Commercial Elevators",
     tagline: "Safe, smooth and energy-efficient vertical transportation.",
     description:
@@ -28,6 +43,7 @@ const productDetails = {
     brochure: "/Aoyama.pdf",
     imagePrimary: "/Aoyama-1.png",
     imageSecondary: "/Aoyama-2.png",
+    gallery: [],
     type: "Premium Residential & Hospitality Elevators",
     tagline: "Modern, safe and dependable elevator solutions.",
     description:
@@ -45,6 +61,7 @@ const productDetails = {
     brochure: "/FUJI TECH KOREA1.pdf",
     imagePrimary: "/Fuji-tech-1.png",
     imageSecondary: "/Fuji-tech-2.png",
+    gallery: [],
     type: "Commercial & Mixed-Use Elevators",
     tagline: "High-performance Korean-engineered elevator solutions.",
     description:
@@ -106,28 +123,77 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] items-start">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] items-start">
           <Card className="overflow-hidden border border-border/70 bg-card/90 backdrop-blur-sm shadow-sm">
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 h-full">
-              <div className="relative h-52 w-full sm:h-72 md:h-80">
-                <Image
-                  src={product.imagePrimary}
-                  alt={product.name}
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 400px, 100vw"
-                />
+            {product.id === "sigma" && product.gallery && product.gallery.length > 0 ? (
+              <div className="grid grid-cols-4 gap-3 p-4">
+                {/* Main hero image */}
+                <div className="relative col-span-4 md:col-span-2 md:row-span-2 h-64 md:h-96 rounded-xl overflow-hidden">
+                  <Image
+                    src={product.gallery[0]}
+                    alt={`${product.name} main installation view`}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 500px, 100vw"
+                  />
+                </div>
+
+                {/* Supporting images as smaller tiles */}
+                {product.gallery.slice(1, 5).map((src, idx) => (
+                  <div
+                    key={src}
+                    className="relative col-span-2 md:col-span-1 h-32 md:h-40 rounded-lg overflow-hidden"
+                  >
+                    <Image
+                      src={src}
+                      alt={`${product.name} detail ${idx + 2}`}
+                      fill
+                      className="object-cover"
+                      sizes="(min-width: 1024px) 250px, 100vw"
+                    />
+                  </div>
+                ))}
+
+                {/* Film-strip row */}
+                <div className="col-span-4 flex gap-2 mt-1 overflow-x-auto pb-1">
+                  {product.gallery.slice(5).map((src, idx) => (
+                    <div
+                      key={src}
+                      className="relative h-20 w-32 md:h-24 md:w-40 flex-shrink-0 rounded-md overflow-hidden border border-border/60"
+                    >
+                      <Image
+                        src={src}
+                        alt={`${product.name} gallery ${idx + 6}`}
+                        fill
+                        className="object-cover"
+                        sizes="200px"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="relative h-52 w-full sm:h-72 md:h-80">
-                <Image
-                  src={product.imageSecondary}
-                  alt={`${product.name} cabin view`}
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 400px, 100vw"
-                />
+            ) : (
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 h-full">
+                <div className="relative h-52 w-full sm:h-72 md:h-80">
+                  <Image
+                    src={product.imagePrimary}
+                    alt={product.name}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 400px, 100vw"
+                  />
+                </div>
+                <div className="relative h-52 w-full sm:h-72 md:h-80">
+                  <Image
+                    src={product.imageSecondary}
+                    alt={`${product.name} cabin view`}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 400px, 100vw"
+                  />
+                </div>
               </div>
-            </div>
+            )}
           </Card>
 
           <Card className="border border-border/70 bg-card/90 backdrop-blur-sm shadow-sm">
