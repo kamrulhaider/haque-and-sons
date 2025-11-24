@@ -100,6 +100,22 @@ export function Footer() {
                 <Linkedin className="h-6 w-6 text-primary-foreground/70 hover:text-primary-foreground transition-colors" />
               </Link>
             </div>
+            <div className="mt-6 text-xs text-primary-foreground/70">
+              <p className="font-semibold mb-2">Location</p>
+              <div className="relative w-full overflow-hidden rounded-md border border-primary-foreground/20 bg-primary-foreground/10">
+                <div className="relative w-full pt-[56.25%]">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.522326406967!2d91.80964327507037!3d22.33389817966249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acdffb5d0ccd8b%3A0x898d98e3ffe780e1!2sHAQUE%20%26%20SONS%20Engineering%20Technology!5e0!3m2!1sen!2sbd!4v1763970142765!5m2!1sen!2sbd"
+                    className="absolute inset-0 h-full w-full"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                    aria-label="Haque &amp; Sons Engineering Technology location on Google Maps"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
