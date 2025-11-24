@@ -23,20 +23,20 @@ export function Header() {
         <Link
           href="/"
           className="flex items-center gap-3 font-bold text-lg text-primary"
-          aria-label="Hoque & Sons Engineering Technology Home"
+          aria-label="Haque & Sons Engineering Technology Home"
         >
           <Image
             src={logoPng}
-            alt="Hoque & Sons Engineering Technology logo"
+            alt="Haque & Sons Engineering Technology logo"
             width={56}
             height={56}
             className="h-14 w-14 object-contain"
             priority
           />
           <span className="font-semibold hidden sm:inline">
-            Hoque & Sons Engineering Technology
+            Haque & Sons Engineering Technology
           </span>
-          <span className="font-semibold sm:hidden">Hoque & Sons ET</span>
+          <span className="font-semibold sm:hidden">Haque & Sons ET</span>
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -80,16 +80,16 @@ export function Header() {
                     href="/"
                     className="flex items-center gap-3 font-bold text-lg text-primary"
                     onClick={closeSheet}
-                    aria-label="Hoque & Sons Engineering Technology Home"
+                    aria-label="Haque & Sons Engineering Technology Home"
                   >
                     <Image
                       src={logoPng}
-                      alt="Hoque & Sons Engineering Technology logo"
+                      alt="Haque & Sons Engineering Technology logo"
                       width={48}
                       height={48}
                       className="h-12 w-12 object-contain"
                     />
-                    <span>Hoque & Sons ET</span>
+                    <span>Haque & Sons ET</span>
                   </Link>
                   <Button variant="ghost" size="icon" onClick={closeSheet}>
                     <X className="h-6 w-6" />

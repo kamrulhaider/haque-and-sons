@@ -1,6 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mountain, Facebook, Twitter, Linkedin } from "lucide-react";
 import { navLinks } from "@/lib/data";
+import logoPng from "@/assets/logo.png";
 
 export function Footer() {
   return (
@@ -12,8 +14,14 @@ export function Footer() {
               href="/"
               className="flex items-center gap-2 text-xl font-bold"
             >
-              <Mountain className="h-7 w-7" />
-              <span>Hoque & Sons Engineering Technology</span>
+              <Image
+                src={logoPng}
+                alt="Haque & Sons Engineering Technology logo"
+                width={40}
+                height={40}
+                className="h-10 w-10 object-contain"
+              />
+              <span>Haque & Sons Engineering Technology</span>
             </Link>
             <p className="mt-4 text-sm text-primary-foreground/70">
               Crafting reliable, elegant elevator experiences since 1988.
@@ -97,7 +105,7 @@ export function Footer() {
 
         <div className="mt-12 border-t border-primary-foreground/20 pt-8 text-center text-sm text-primary-foreground/70">
           <p>
-            &copy; {new Date().getFullYear()} Hoque & Sons Engineering
+            &copy; {new Date().getFullYear()} Haque & Sons Engineering
             Technology. All Rights Reserved.
           </p>
         </div>
