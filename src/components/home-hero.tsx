@@ -48,7 +48,7 @@ export function HomeHero() {
             </h1>
             <p className="mt-5 max-w-xl text-base md:text-lg text-neutral-200/90">
               We design, supply, and install modern elevators and escalators for
-              residential, commercial, and industrial projectswith
+              residential, commercial, and industrial projects with a focus on
               uncompromising safety and comfort.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">

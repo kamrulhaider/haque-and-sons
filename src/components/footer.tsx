@@ -124,6 +124,17 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Haque & Sons Engineering
             Technology. All Rights Reserved.
           </p>
+          <p className="mt-2 text-[10px] text-primary-foreground/60">
+            Developed by{" "}
+            <a
+              href="https://makeupcoders.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-primary-foreground"
+            >
+              makeupcoders.com
+            </a>
+          </p>
         </div>
       </div>
     </footer>
