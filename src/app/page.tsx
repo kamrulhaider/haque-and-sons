@@ -183,7 +183,7 @@ export default function Home() {
               Why Choose Us
             </span>
             <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-              Why Hoque & Sons Engineering Technology
+              Why Haque & Sons Engineering Technology
             </h2>
             <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
               We combine safety, craftsmanship, and smart technology to deliver

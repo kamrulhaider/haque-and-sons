@@ -24,7 +24,7 @@ export function Footer() {
               <span>Haque & Sons Engineering Technology</span>
             </Link>
             <p className="mt-4 text-sm text-primary-foreground/70">
-              Crafting reliable, elegant elevator experiences since 1988.
+              Crafting reliable, elegant elevator experiences.
             </p>
           </div>
 
@@ -72,7 +72,7 @@ export function Footer() {
                   href="tel:02333311757"
                   className="block hover:text-primary-foreground transition-colors"
                 >
-                  02333311757, 01714-404495, 01673-355534
+                  02333311757, 01714044905, 01673-355534
                 </a>
                 <p className="font-semibold mt-2">Email</p>
                 <a

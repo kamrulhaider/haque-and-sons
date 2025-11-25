@@ -15,7 +15,7 @@ const feniAddress = [
 
 const warehouseAddress = ["Bara Quarter", "Phartali, Chattogram"];
 
-const phoneNumbers = ["02333311757", "01714-404495", "01673-355534"];
+const phoneNumbers = ["02333311757", "01714044905", "01673-355534"];
 
 const email = "ziaulhaquejami@gmail.com";
 

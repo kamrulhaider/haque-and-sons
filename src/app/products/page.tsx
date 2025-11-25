@@ -52,7 +52,7 @@ export default function ProductsPage() {
             Elevator Brands We Offer
           </h1>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-            Hoque & Sons Engineering Technology supplies and installs leading
+            Haque & Sons Engineering Technology supplies and installs leading
             global elevator brands to match the needs of your building and
             budget.
           </p>
@@ -120,7 +120,7 @@ export default function ProductsPage() {
                         />
                       ) : (
                         <p className="text-xs md:text-sm font-semibold tracking-[0.26em] uppercase text-slate-700">
-                          Hoque &amp; Sons
+                          Haque &amp; Sons
                         </p>
                       )}
                     </div>

@@ -41,7 +41,7 @@ export function HomeHero() {
               ELEVATOR & ESCALATOR SOLUTIONS
             </p>
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white drop-shadow-xl">
-              Hoque & Sons
+              Haque & Sons
               <span className="block text-primary-100">
                 Engineering Technology
               </span>
@@ -88,7 +88,7 @@ export function HomeHero() {
             <div className="relative flex h-64 w-full sm:h-72 md:h-80 lg:h-[22rem] items-center justify-center">
               <Image
                 src={logoPng}
-                alt="Hoque & Sons Engineering Technology logo"
+                alt="Haque & Sons Engineering Technology logo"
                 fill
                 className="object-contain drop-shadow-[0_0_40px_rgba(0,0,0,0.9)]"
                 sizes="(min-width: 1024px) 420px, 90vw"
