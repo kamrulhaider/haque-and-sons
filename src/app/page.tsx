@@ -41,7 +41,7 @@ export default function Home() {
     {
       icon: <Building2 className="h-8 w-8" />,
       label: "Projects Delivered",
-      value: "750+",
+      value: "500+",
     },
     {
       icon: <Users className="h-8 w-8" />,

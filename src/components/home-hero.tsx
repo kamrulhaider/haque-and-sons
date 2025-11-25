@@ -70,7 +70,7 @@ export function HomeHero() {
             </div>
             <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-neutral-300/90">
               <div>
-                <div className="font-semibold text-white">750+ projects</div>
+                <div className="font-semibold text-white">500+ projects</div>
                 <div className="text-xs text-neutral-300">
                   Commercial, residential & industrial
                 </div>
